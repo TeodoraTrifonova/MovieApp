@@ -9,6 +9,13 @@ module bg.tu.varna.sit.movieproject {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires log4j;
+    requires org.hibernate.orm.core;
+    requires java.persistence;
+    requires java.naming;
+    requires java.sql;
+
+    //add hibernate exports
 
     opens bg.tu.varna.sit.movieproject to javafx.fxml;
     exports bg.tu.varna.sit.movieproject.application;
