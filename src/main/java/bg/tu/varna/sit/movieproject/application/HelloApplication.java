@@ -25,8 +25,8 @@ public class HelloApplication extends Application {
         stage.setTitle(Constants.Titles.LoginTitle);
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.setWidth(600);
-        stage.setHeight(400);
+
+        
         stage.show();
     }
 
