@@ -1,13 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="586.0" prefWidth="506.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="684.0" prefWidth="506.0" style="-fx-background-color: #210063;">
+         <children>
+            <AnchorPane layoutX="17.0" layoutY="16.0" prefHeight="660.0" prefWidth="474.0" style="-fx-background-color: #310590;">
+               <effect>
+                  <DropShadow height="18.81" radius="8.719999999999999" spread="0.06" width="18.07">
+                     <color>
+                        <Color red="0.6487390398979187" green="0.6348684430122375" blue="0.7105262875556946" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <children>
+                  <Label layoutX="185.0" layoutY="351.0" text="Password">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.8625592417061612" startX="1.0" startY="0.6350710900473934">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4946393668651581" green="0.3874269127845764" blue="0.7894737124443054" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="182.0" layoutY="239.0" text="Username">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.8625592417061612" startX="1.0" startY="0.6350710900473934">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4946393668651581" green="0.3874269127845764" blue="0.7894737124443054" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <TextField fx:id="username" layoutX="94.0" layoutY="277.0" promptText="type here">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </TextField>
+                  <PasswordField fx:id="password" layoutX="94.0" layoutY="389.0" promptText="type here">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </PasswordField>
+                  <Button fx:id="register" layoutX="174.0" layoutY="487.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Register">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.33057552576065063" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Button fx:id="goBack" layoutX="175.0" layoutY="575.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Go back">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="30.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.33057552576065063" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </Button>
+                  <Label layoutX="34.0" layoutY="24.0" text="Registration">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="70.0" />
+                     </font>
+                     <effect>
+                        <Reflection bottomOpacity="0.05" fraction="0.76" topOpacity="0.24" />
+                     </effect>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.6872037914691942" startX="1.0" startY="0.25118483412322273">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.3294117748737335" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.34865900383141757">
+                                 <color>
+                                    <Color red="0.44907405972480774" green="0.21296297013759613" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9473684430122375" green="0.9473684430122375" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Label>
+                  <Label layoutX="55.0" layoutY="186.0" text="Enter your credentials below:">
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.8625592417061612" startX="1.0" startY="0.6350710900473934">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.4946393668651581" green="0.3874269127845764" blue="0.7894737124443054" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <font>
+                        <Font name="Franklin Gothic Medium" size="30.0" />
+                     </font>
+                  </Label>
+                  <Polyline layoutX="84.0" layoutY="91.0" opacity="0.18" points="375.0, 547.0, 375.0, -76.0, -68.0, -76.0, -68.0, 250.0" strokeType="INSIDE">
+                     <effect>
+                        <DropShadow>
+                           <input>
+                              <Glow />
+                           </input>
+                        </DropShadow>
+                     </effect>
+                     <fill>
+                        <LinearGradient endX="0.995260663507109" endY="0.3033175355450237" startX="1.0" startY="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.007662835249042145">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.9333333373069763" green="0.8999999761581421" blue="1.0" opacity="0.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <stroke>
+                        <LinearGradient endX="0.14218009478672988" endY="1.0" startX="1.0">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.3499999940395355" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </stroke>
+                  </Polyline>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
