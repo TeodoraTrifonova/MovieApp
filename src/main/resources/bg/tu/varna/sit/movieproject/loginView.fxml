@@ -12,7 +12,6 @@
 <?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="502.0" prefWidth="458.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <AnchorPane layoutX="-14.0" layoutY="-7.0" prefHeight="509.0" prefWidth="506.0" style="-fx-background-color: #210063;">
@@ -182,7 +181,7 @@
                         </DropShadow>
                      </effect>
                   </Button>
-                  <Label layoutX="86.0" layoutY="34.0" text="Welcome">
+                  <Label layoutX="147.0" layoutY="30.0" text="Login">
                      <font>
                         <Font name="Franklin Gothic Heavy" size="70.0" />
                      </font>
