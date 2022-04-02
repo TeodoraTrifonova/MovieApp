@@ -19,6 +19,9 @@ public class Film implements Serializable {
     @Column(name = "filmName",nullable = false)
     private String filmName;
 
+    @Column(name = "actors",nullable = false)
+    private String actors;
+
     @Column(name="releaseYear",nullable = false)
     private int releaseYear;
 
@@ -48,6 +51,14 @@ public class Film implements Serializable {
 
     public void setFilmName(String filmName) {
         this.filmName = filmName;
+    }
+
+    public String getActors() {
+        return actors;
+    }
+
+    public void setActors(String actors) {
+        this.actors = actors;
     }
 
     public int getReleaseYear() {

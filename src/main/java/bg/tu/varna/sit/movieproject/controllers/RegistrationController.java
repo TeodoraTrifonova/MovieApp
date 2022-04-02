@@ -64,5 +64,21 @@ public class RegistrationController {
         }
     }
 
+    @FXML
+    public void backToLogin(){
+        try
+        {   s.close();
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(LOGIN_VIEW));
+            Stage stage = new Stage();
+            fxmlLoader.setController(new LoginController(stage));
+            Parent root1 = (Parent) fxmlLoader.load();
+            stage.setScene(new Scene(root1));
+            stage.show();
+        } catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 
 }
