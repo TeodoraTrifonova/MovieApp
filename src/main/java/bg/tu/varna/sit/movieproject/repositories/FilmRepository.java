@@ -1,7 +1,6 @@
 package bg.tu.varna.sit.movieproject.repositories;
 
 import bg.tu.varna.sit.movieproject.access.Connection;
-import bg.tu.varna.sit.movieproject.entities.Actor;
 import bg.tu.varna.sit.movieproject.entities.Film;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;

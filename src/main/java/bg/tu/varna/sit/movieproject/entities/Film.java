@@ -32,10 +32,6 @@ public class Film implements Serializable {
     @JoinColumn(name = "idGenre")
     private Genre byGenre;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idActor")
-    private Actor byActor;
-
     public Film() {}
 
     public Long getIdFilm() {
@@ -84,14 +80,6 @@ public class Film implements Serializable {
 
     public void setByGenre(Genre byGenre) {
         this.byGenre = byGenre;
-    }
-
-    public Actor getByActor() {
-        return byActor;
-    }
-
-    public void setByActor(Actor byActor) {
-        this.byActor = byActor;
     }
 
     @Override
