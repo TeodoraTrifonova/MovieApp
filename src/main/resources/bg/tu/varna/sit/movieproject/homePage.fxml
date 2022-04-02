@@ -240,7 +240,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="logout" layoutX="226.0" layoutY="413.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="logout">
+                  <Button fx:id="logout" layoutX="226.0" layoutY="413.0" mnemonicParsing="false" onAction="#logOut" style="-fx-background-color: #b89ee5;" text="logout">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>
