@@ -18,7 +18,6 @@
 
         <mapping class="bg.tu.varna.sit.movieproject.entities.User"/>
         <mapping class="bg.tu.varna.sit.movieproject.entities.Genre"/>
-        <mapping class="bg.tu.varna.sit.movieproject.entities.Actor"/>
         <mapping class="bg.tu.varna.sit.movieproject.entities.Film"/>
 
     </session-factory>
