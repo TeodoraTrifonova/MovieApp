@@ -132,7 +132,7 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </PasswordField>
-                  <Button fx:id="register" layoutX="251.0" layoutY="396.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Register">
+                  <Button fx:id="register" layoutX="251.0" layoutY="396.0" mnemonicParsing="false" onAction="#toRegistration" style="-fx-background-color: #b89ee5;" text="Register">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>

@@ -5,7 +5,7 @@
 <hibernate-configuration>
     <session-factory>
         <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
-        <property name="connection.url">jdbc:mysql://localhost:3306/inventory</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/mydb</property>
         <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
         <property name="connection.username">root</property>
         <property name="connection.password">ivotediparola</property>
@@ -16,7 +16,10 @@
         <property name="hbm2ddl.auto">update</property>
 
 
-        <mapping class="bg.tu_varna.sit.inventorymanagement.data.entities.Admin"/>
+        <mapping class="bg.tu.varna.sit.movieproject.entities.User"/>
+        <mapping class="bg.tu.varna.sit.movieproject.entities.Genre"/>
+        <mapping class="bg.tu.varna.sit.movieproject.entities.Actor"/>
+        <mapping class="bg.tu.varna.sit.movieproject.entities.Film"/>
 
     </session-factory>
 </hibernate-configuration>

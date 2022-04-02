@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,6 +26,7 @@ public class HelloApplication extends Application {
         stage.setTitle(Constants.Titles.LoginTitle);
         stage.setScene(scene);
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UNDECORATED); // Tedi ottuk si ti!!!
 
         
         stage.show();
