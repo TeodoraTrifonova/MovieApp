@@ -355,11 +355,11 @@
                   </DropShadow>
                </effect>
             </Label>
-            <TextField layoutX="26.0" layoutY="201.0" promptText="name of the movie">
+            <TextField fx:id="name" layoutX="26.0" layoutY="201.0" promptText="name of the movie">
                <font>
                   <Font name="Franklin Gothic Medium Cond" size="12.0" />
                </font></TextField>
-            <TextField layoutX="248.0" layoutY="201.0" promptText="year of release">
+            <TextField fx:id="year" layoutX="248.0" layoutY="201.0" promptText="year of release">
                <font>
                   <Font name="Franklin Gothic Medium Cond" size="12.0" />
                </font>
