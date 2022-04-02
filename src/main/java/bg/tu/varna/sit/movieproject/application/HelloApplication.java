@@ -29,7 +29,7 @@ public class HelloApplication extends Application {
         stage.initStyle(StageStyle.UNDECORATED); // Tedi ottuk si ti!!!
 
         
-        stage.show();
+        /stage.show();
     }
 
     public static void main(String[] args) {
