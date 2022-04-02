@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -74,29 +71,8 @@
                </stroke>
             </Polyline>
             <Polyline layoutX="213.0" layoutY="30.0" opacity="0.91" points="469.0, -21.0, 402.0, 74.0, -187.0, 74.0, -126.0, -21.0" strokeType="INSIDE">
-               <effect>
-                  <DropShadow height="41.52" radius="22.457500000000003" spread="0.16" width="50.31">
-                     <input>
-                        <Glow level="0.45">
-                           <input>
-                              <Lighting diffuseConstant="1.02" specularConstant="1.82" specularExponent="24.6" surfaceScale="3.45">
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant azimuth="280.86">
-                                       <color>
-                                          <Color green="0.44999998807907104" blue="1.0" />
-                                       </color>
-                                    </Light.Distant>
-                                 </light>
-                              </Lighting>
-                           </input></Glow>
-                     </input>
-                  </DropShadow>
-               </effect>
                <fill>
-                  <LinearGradient cycleMethod="REFLECT" endX="0.5308056872037915" endY="0.990521327014218" startX="0.5260663507109005" startY="1.0">
+                  <LinearGradient cycleMethod="REFLECT" endX="0.5308056872037915" endY="0.990521327014218" startX="1.0">
                      <stops>
                         <Stop>
                            <color>
@@ -105,12 +81,12 @@
                         </Stop>
                         <Stop offset="0.09195402298850575">
                            <color>
-                              <Color red="0.3458000123500824" green="0.17159999907016754" blue="0.5199999809265137" />
+                              <Color green="0.09352517873048782" blue="1.0" />
                            </color>
                         </Stop>
                         <Stop offset="0.303748469407907">
                            <color>
-                              <Color red="0.4699999988079071" green="0.14569999277591705" blue="0.4429750144481659" opacity="0.5670995712280273" />
+                              <Color green="0.16273380815982819" blue="0.38999998569488525" opacity="0.5699999928474426" />
                            </color>
                         </Stop>
                         <Stop offset="0.42911877394636">
@@ -283,30 +259,6 @@
                   </DropShadow>
                </effect>
             </TextArea>
-            <TextField fx:id="name" layoutX="26.0" layoutY="186.0" promptText="name of the movie">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <effect>
-                  <DropShadow height="18.07" radius="6.3375" width="9.28">
-                     <color>
-                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </TextField>
-            <TextField fx:id="year" layoutX="255.0" layoutY="186.0" promptText="year of realease">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <effect>
-                  <DropShadow height="18.07" radius="6.3375" width="9.28">
-                     <color>
-                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
-                     </color>
-                  </DropShadow>
-               </effect>
-            </TextField>
             <ComboBox fx:id="rating" layoutX="487.0" layoutY="290.0" prefWidth="150.0" promptText="movie's rating">
                <cursor>
                   <Cursor fx:constant="HAND" />
@@ -403,6 +355,7 @@
                   </DropShadow>
                </effect>
             </Label>
+            <TextField layoutX="26.0" layoutY="201.0" />
          </children>
       </AnchorPane>
    </children>
