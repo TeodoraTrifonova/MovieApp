@@ -26,7 +26,7 @@ public class HelloApplication extends Application {
         stage.setTitle(Constants.Titles.LoginTitle);
         stage.setScene(scene);
         stage.setResizable(false);
-        stage.initStyle(StageStyle.UNDECORATED); // Tedi ottuk si ti!!!
+      //  stage.initStyle(StageStyle.UNDECORATED); // Tedi ottuk si ti!!!
         stage.show();
     }
 
