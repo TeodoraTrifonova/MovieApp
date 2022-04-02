@@ -27,9 +27,7 @@ public class HelloApplication extends Application {
         stage.setScene(scene);
         stage.setResizable(false);
         stage.initStyle(StageStyle.UNDECORATED); // Tedi ottuk si ti!!!
-
-        
-        /stage.show();
+        stage.show();
     }
 
     public static void main(String[] args) {

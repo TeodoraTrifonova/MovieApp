@@ -45,7 +45,8 @@ public class RegistrationController {
                 alert.show();
             }
             else
-            {registrationService.saveUser(userModel);
+            {
+                registrationService.saveUser(userModel);
                 try
                 {   s.close();
                     FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(LOGIN_VIEW));
