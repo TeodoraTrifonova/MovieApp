@@ -83,7 +83,7 @@ public class ActorRepository implements DAORepository<Actor> {
         Transaction transaction = session.beginTransaction();
         List<Actor> actor = new LinkedList<>();
         try {
-            String jpql = "SELECT t FROM actors t";
+            String jpql = "SELECT t FROM Actor t";
             actor.addAll(session.createQuery(jpql, Actor.class).getResultList());
             log.info("Get all actors");
         }

@@ -83,7 +83,7 @@ public class FilmRepository  implements DAORepository<Film>  {
         Transaction transaction = session.beginTransaction();
         List<Film> film = new LinkedList<>();
         try {
-            String jpql = "SELECT t FROM films t";
+            String jpql = "SELECT t FROM Film t";
             film.addAll(session.createQuery(jpql, Film.class).getResultList());
             log.info("Get all films");
         }
