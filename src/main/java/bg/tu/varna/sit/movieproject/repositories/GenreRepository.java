@@ -82,7 +82,7 @@ public class GenreRepository  implements DAORepository<Genre>{
         Transaction transaction = session.beginTransaction();
         List<Genre> actor = new LinkedList<>();
         try {
-            String jpql = "SELECT t FROM genres t";
+            String jpql = "SELECT t FROM Genre t";
             actor.addAll(session.createQuery(jpql, Genre.class).getResultList());
             log.info("Get all genres");
         }

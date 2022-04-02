@@ -1,7 +1,6 @@
 package bg.tu.varna.sit.movieproject.repositories;
 
 import bg.tu.varna.sit.movieproject.access.Connection;
-import bg.tu.varna.sit.movieproject.entities.Actor;
 import bg.tu.varna.sit.movieproject.entities.Film;
 import org.apache.log4j.Logger;
 import org.hibernate.Session;
@@ -83,7 +82,7 @@ public class FilmRepository  implements DAORepository<Film>  {
         Transaction transaction = session.beginTransaction();
         List<Film> film = new LinkedList<>();
         try {
-            String jpql = "SELECT t FROM films t";
+            String jpql = "SELECT t FROM Film t";
             film.addAll(session.createQuery(jpql, Film.class).getResultList());
             log.info("Get all films");
         }

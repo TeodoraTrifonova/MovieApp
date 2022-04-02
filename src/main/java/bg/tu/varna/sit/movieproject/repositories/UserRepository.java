@@ -80,10 +80,10 @@ public class UserRepository  implements DAORepository<User>{
     public List<User> getAll() {
         Session session = Connection.openSession();
         Transaction transaction = session.beginTransaction();
-        List<User> users = new LinkedList<>();
+        List<User> actor = new LinkedList<>();
         try {
-            String jpql = "SELECT u FROM User u";
-            users.addAll(session.createQuery(jpql, User.class).getResultList());
+            String jpql = "SELECT t FROM User t";
+            actor.addAll(session.createQuery(jpql, User.class).getResultList());
             log.info("Get all users");
         }
         catch (Exception e)
@@ -93,6 +93,6 @@ public class UserRepository  implements DAORepository<User>{
         finally {
             transaction.commit();
         }
-        return users;
+        return actor;
     }
 }
