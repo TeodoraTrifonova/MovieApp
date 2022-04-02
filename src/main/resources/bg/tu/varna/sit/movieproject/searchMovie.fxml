@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.InnerShadow?>
-<?import javafx.scene.effect.Light.Distant?>
-<?import javafx.scene.effect.Lighting?>
 <?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.effect.Shadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -75,59 +72,27 @@
                </stroke>
             </Polyline>
             <Polyline layoutX="220.0" layoutY="30.0" opacity="0.91" points="407.0, -15.0, 480.0, 74.0, -116.0, 74.0, -185.0, -15.0" strokeType="INSIDE">
-               <effect>
-                  <DropShadow height="41.52" radius="22.457500000000003" spread="0.16" width="50.31">
-                     <input>
-                        <Glow level="0.45">
-                           <input>
-                              <Lighting diffuseConstant="1.02" specularConstant="1.82" specularExponent="24.6" surfaceScale="3.45">
-                                 <bumpInput>
-                                    <Shadow />
-                                 </bumpInput>
-                                 <light>
-                                    <Light.Distant azimuth="280.86">
-                                       <color>
-                                          <Color green="0.44999998807907104" blue="1.0" />
-                                       </color>
-                                    </Light.Distant>
-                                 </light>
-                              </Lighting>
-                           </input>
-                        </Glow>
-                     </input>
-                  </DropShadow>
-               </effect>
                <fill>
-                  <LinearGradient cycleMethod="REFLECT" endX="0.5450236966824645" endY="0.943127962085308" startX="0.5355450236966824" startY="1.0">
+                  <LinearGradient cycleMethod="REFLECT" endX="0.014218009478672985" endY="0.943127962085308" startY="0.2796208530805687">
                      <stops>
                         <Stop>
                            <color>
-                              <Color red="0.509381115436554" green="0.9272539019584656" blue="0.9736841917037964" opacity="0.9399999976158142" />
+                              <Color green="0.7194244861602783" blue="1.0" opacity="0.5400000214576721" />
                            </color>
                         </Stop>
-                        <Stop offset="0.09195402298850575">
+                        <Stop offset="0.44444444444444403">
                            <color>
-                              <Color red="0.5" blue="1.0" />
+                              <Color red="0.40287768840789795" blue="1.0" opacity="0.8199999928474426" />
                            </color>
                         </Stop>
-                        <Stop offset="0.303748469407907">
+                        <Stop offset="0.9310344827586207">
                            <color>
-                              <Color red="0.4699999988079071" green="0.14569999277591705" blue="0.4429750144481659" opacity="0.5670995712280273" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.4291187739463599">
-                           <color>
-                              <Color red="1.0" />
-                           </color>
-                        </Stop>
-                        <Stop offset="0.9080459770114943">
-                           <color>
-                              <Color red="0.10000000149011612" blue="1.0" opacity="0.20000000298023224" />
+                              <Color red="0.10000000149011612" blue="1.0" opacity="0.5324675440788269" />
                            </color>
                         </Stop>
                         <Stop offset="1.0">
                            <color>
-                              <Color green="0.8999999761581421" blue="1.0" opacity="0.4935064911842346" />
+                              <Color green="0.09352517873048782" blue="1.0" opacity="0.5400000214576721" />
                            </color>
                         </Stop>
                      </stops>
