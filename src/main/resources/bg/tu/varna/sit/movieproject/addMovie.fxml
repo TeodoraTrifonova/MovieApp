@@ -1,14 +1,409 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import com.gluonhq.charm.glisten.control.TextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Polyline?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="bg.tu.varna.sit.movieproject.AddMovie"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="549.0" prefWidth="745.0" style="-fx-background-color: #210063;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane layoutX="17.0" prefHeight="550.0" prefWidth="713.0" style="-fx-background-color: #310590;">
+         <effect>
+            <DropShadow height="18.44" radius="8.627500000000001" spread="0.06" width="18.07" />
+         </effect>
+         <children>
+            <Polyline layoutX="129.0" layoutY="68.0" opacity="0.18" points="584.0, 482.0, 584.0, 47.0, -129.0, 47.0, -129.0, 482.0" strokeType="INSIDE">
+               <effect>
+                  <DropShadow>
+                     <input>
+                        <Glow />
+                     </input>
+                  </DropShadow>
+               </effect>
+               <fill>
+                  <LinearGradient endX="0.3838862559241706" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.004264132585376501" green="0.1182301789522171" blue="0.18421052396297455" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.6015325670498084">
+                           <color>
+                              <Color red="0.5899999737739563" green="0.03539999946951866" blue="0.03539999946951866" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.22368420660495758" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="1.0" endY="0.5829383886255923" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.02631578966975212" blue="0.07894736528396606" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Polyline>
+            <Polyline layoutX="213.0" layoutY="30.0" opacity="0.91" points="469.0, -21.0, 402.0, 74.0, -187.0, 74.0, -126.0, -21.0" strokeType="INSIDE">
+               <effect>
+                  <DropShadow height="41.52" radius="22.457500000000003" spread="0.16" width="50.31">
+                     <input>
+                        <Glow level="0.45">
+                           <input>
+                              <Lighting diffuseConstant="1.02" specularConstant="1.82" specularExponent="24.6" surfaceScale="3.45">
+                                 <bumpInput>
+                                    <Shadow />
+                                 </bumpInput>
+                                 <light>
+                                    <Light.Distant azimuth="280.86">
+                                       <color>
+                                          <Color green="0.44999998807907104" blue="1.0" />
+                                       </color>
+                                    </Light.Distant>
+                                 </light>
+                              </Lighting>
+                           </input></Glow>
+                     </input>
+                  </DropShadow>
+               </effect>
+               <fill>
+                  <LinearGradient cycleMethod="REFLECT" endX="0.5308056872037915" endY="0.990521327014218" startX="0.5260663507109005" startY="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color green="0.8999999761581421" blue="1.0" opacity="0.939393937587738" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.09195402298850575">
+                           <color>
+                              <Color red="0.3458000123500824" green="0.17159999907016754" blue="0.5199999809265137" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.303748469407907">
+                           <color>
+                              <Color red="0.4699999988079071" green="0.14569999277591705" blue="0.4429750144481659" opacity="0.5670995712280273" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.42911877394636">
+                           <color>
+                              <Color green="0.43650001287460327" blue="0.9700000286102295" opacity="0.5064935088157654" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.9080459770114943">
+                           <color>
+                              <Color red="0.10000000149011612" blue="1.0" opacity="0.1991342008113861" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color green="0.8999999761581421" blue="1.0" opacity="0.4935064911842346" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </fill>
+               <stroke>
+                  <LinearGradient endX="0.14218009478672988" endY="1.0" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.5600000023841858" green="0.03920000046491623" blue="0.03920000046491623" opacity="0.5974025726318359" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </stroke>
+            </Polyline>
+            <Label layoutX="154.0" layoutY="16.0" text="Add a Movie">
+               <font>
+                  <Font name="Franklin Gothic Heavy" size="70.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.2796208530805687">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.05747126436781609">
+                           <color>
+                              <Color green="0.699999988079071" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="0.5566220326262978">
+                           <color>
+                              <Color red="0.03999999910593033" green="0.07199999690055847" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.3499999940395355" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <Reflection fraction="0.0" topOpacity="0.0">
+                     <input>
+                        <DropShadow height="14.1625" radius="6.7056249999999995" spread="1.0" width="14.66">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                           <input>
+                              <InnerShadow choke="0.04" height="1.0" radius="0.0" width="0.0">
+                                 <color>
+                                    <Color red="0.5299999713897705" green="0.9594244360923767" blue="1.0" />
+                                 </color>
+                              </InnerShadow>
+                           </input>
+                        </DropShadow>
+                     </input>
+                  </Reflection>
+               </effect>
+            </Label>
+            <Button fx:id="addMovie" layoutX="210.0" layoutY="415.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="283.0" style="-fx-background-color: #b89ee5;" text="Add movie">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.33057552576065063" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="goBack" layoutX="292.0" layoutY="486.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Go back">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.33057552576065063" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.8716415166854858" green="0.8131091594696045" blue="0.9342105388641357" />
+                     </color>
+                  </DropShadow>
+               </effect>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <TextArea fx:id="description" layoutX="252.0" layoutY="294.0" prefHeight="81.0" prefWidth="200.0" promptText="summary of the movie">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextArea>
+            <TextArea fx:id="actors" layoutX="32.0" layoutY="295.0" prefHeight="38.0" prefWidth="200.0" promptText="actors in the movie">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextArea>
+            <TextField fx:id="name" layoutX="26.0" layoutY="186.0" promptText="name of the movie">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <TextField fx:id="year" layoutX="255.0" layoutY="186.0" promptText="year of realease">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </TextField>
+            <ComboBox fx:id="rating" layoutX="487.0" layoutY="290.0" prefWidth="150.0" promptText="movie's rating">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+            <ComboBox fx:id="genre" layoutX="487.0" layoutY="186.0" prefWidth="150.0" promptText="movie's genre">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow height="18.07" radius="6.3375" width="9.28">
+                     <color>
+                        <Color red="0.15809999406337738" green="0.17582158744335175" blue="0.5099999904632568" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </ComboBox>
+            <Label layoutX="27.0" layoutY="150.0" text="Name:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="252.0" layoutY="150.0" text="Date:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="486.0" layoutY="254.0" text="Rating:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="251.0" layoutY="255.0" text="Description:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="35.0" layoutY="256.0" text="Actors:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="487.0" layoutY="150.0" text="Genre:" textFill="WHITE">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="30.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.00487329438328743" green="0.0694444477558136" blue="0.2631579041481018" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
 </AnchorPane>
