@@ -3,6 +3,7 @@ package bg.tu.varna.sit.movieproject.common;
 public class Constants {
     public static class View{
         public static final String LOGIN_VIEW = "/bg/tu/varna/sit/movieproject/loginView.fxml";
+        public static final String REGISTRATION_VIEW = "/bg/tu/varna/sit/movieproject/registrationView.fxml";
 
     }
 

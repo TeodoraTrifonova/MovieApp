@@ -17,9 +17,20 @@ module bg.tu.varna.sit.movieproject {
 
     //add hibernate exports
 
+    opens bg.tu.varna.sit.movieproject.entities to org.hibernate.orm.core;
+    exports bg.tu.varna.sit.movieproject.entities;
+
+    opens bg.tu.varna.sit.movieproject.access to org.hibernate.orm.core;
+    exports  bg.tu.varna.sit.movieproject.access;
+
+    exports bg.tu.varna.sit.movieproject.models;
+    opens  bg.tu.varna.sit.movieproject.models to javafx.base;
+
     opens bg.tu.varna.sit.movieproject to javafx.fxml;
+
     exports bg.tu.varna.sit.movieproject.application;
     opens bg.tu.varna.sit.movieproject.application to javafx.fxml;
+
     exports bg.tu.varna.sit.movieproject.controllers;
     opens bg.tu.varna.sit.movieproject.controllers to javafx.fxml;
 }

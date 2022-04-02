@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
@@ -12,7 +13,6 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Polyline?>
 <?import javafx.scene.text.Font?>
-
 
 <AnchorPane prefHeight="370.0" prefWidth="589.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
@@ -73,7 +73,56 @@
                         </LinearGradient>
                      </stroke>
                   </Polyline>
-                  <Polyline layoutX="135.0" layoutY="100.0" opacity="0.18" points="333.0, 254.0, 333.0, 93.0, -55.0, 93.0, -55.0, 254.0" strokeType="INSIDE">
+                  <Label layoutX="93.0" layoutY="43.0" text="Home Page">
+                     <font>
+                        <Font name="Franklin Gothic Heavy" size="70.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.2796208530805687">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.05747126436781609">
+                                 <color>
+                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5566220326262978">
+                                 <color>
+                                    <Color red="0.03999999910593033" green="0.07199999690055847" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="0.3499999940395355" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                     <effect>
+                        <Reflection fraction="0.0" topOpacity="0.0">
+                           <input>
+                              <DropShadow height="14.1625" radius="6.7056249999999995" spread="1.0" width="14.66">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                                 <input>
+                                    <InnerShadow choke="0.04" height="1.0" radius="0.0" width="0.0">
+                                       <color>
+                                          <Color red="0.5299999713897705" green="0.9594244360923767" blue="1.0" />
+                                       </color>
+                                    </InnerShadow>
+                                 </input>
+                              </DropShadow>
+                           </input>
+                        </Reflection>
+                     </effect>
+                  </Label>
+                  <Polyline layoutX="135.0" layoutY="63.0" opacity="0.18" points="333.0, 288.0, 333.0, 93.0, -55.0, 93.0, -55.0, 277.0" strokeType="INSIDE">
                      <effect>
                         <DropShadow>
                            <input>
@@ -129,7 +178,7 @@
                         </LinearGradient>
                      </stroke>
                   </Polyline>
-                  <Button fx:id="searchMovies" layoutX="181.0" layoutY="284.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Search movies">
+                  <Button fx:id="searchMovies" layoutX="181.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Search movies">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>
@@ -156,8 +205,11 @@
                            </color>
                         </DropShadow>
                      </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Button fx:id="addMovies" layoutX="196.0" layoutY="201.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Add movies">
+                  <Button fx:id="addMovies" layoutX="196.0" layoutY="177.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Add movies">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>
@@ -184,78 +236,11 @@
                            </color>
                         </DropShadow>
                      </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
-                  <Label layoutX="93.0" layoutY="26.0" text="Home Page">
-                     <font>
-                        <Font name="Franklin Gothic Heavy" size="70.0" />
-                     </font>
-                     <effect>
-                        <Reflection bottomOpacity="0.12" fraction="0.76" topOpacity="0.24">
-                           <input>
-                              <DropShadow height="10.68" radius="5.835" spread="1.0" width="14.66">
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                                 <input>
-                                    <InnerShadow choke="0.04" height="1.0" radius="0.0" width="0.0">
-                                       <color>
-                                          <Color red="0.5299999713897705" green="0.9594244360923767" blue="1.0" />
-                                       </color>
-                                    </InnerShadow>
-                                 </input>
-                              </DropShadow>
-                           </input>
-                        </Reflection>
-                     </effect>
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.2796208530805687">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.05747126436781609">
-                                 <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="0.5566220326262978">
-                                 <color>
-                                    <Color red="0.03999999910593033" green="0.07199999690055847" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.3499999940395355" blue="1.0" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                  </Label>
-                  <Label layoutX="223.0" layoutY="107.0">
-                     <textFill>
-                        <LinearGradient endX="1.0" endY="0.8625592417061612" startX="1.0" startY="0.6350710900473934">
-                           <stops>
-                              <Stop>
-                                 <color>
-                                    <Color red="1.0" green="1.0" blue="1.0" />
-                                 </color>
-                              </Stop>
-                              <Stop offset="1.0">
-                                 <color>
-                                    <Color red="0.4946393668651581" green="0.3874269127845764" blue="0.7894737124443054" />
-                                 </color>
-                              </Stop>
-                           </stops>
-                        </LinearGradient>
-                     </textFill>
-                     <font>
-                        <Font name="Franklin Gothic Medium" size="30.0" />
-                     </font>
-                  </Label>
-                  <Button fx:id="logout" layoutX="226.0" layoutY="424.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="logout">
+                  <Button fx:id="logout" layoutX="226.0" layoutY="413.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="logout">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>
@@ -282,6 +267,9 @@
                            </color>
                         </DropShadow>
                      </effect>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children>
             </AnchorPane>
