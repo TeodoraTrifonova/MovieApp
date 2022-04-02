@@ -178,7 +178,7 @@
                         </LinearGradient>
                      </stroke>
                   </Polyline>
-                  <Button fx:id="searchMovies" layoutX="181.0" layoutY="265.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Search movies">
+                  <Button fx:id="searchMovies" layoutX="181.0" layoutY="265.0" mnemonicParsing="false" onAction="#toSearchMovie" style="-fx-background-color: #b89ee5;" text="Search movies">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>
@@ -209,7 +209,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button fx:id="addMovies" layoutX="196.0" layoutY="177.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Add movies">
+                  <Button fx:id="addMovies" layoutX="196.0" layoutY="177.0" mnemonicParsing="false" onAction="#toAddMovie" style="-fx-background-color: #b89ee5;" text="Add movies">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="30.0" />
                      </font>

@@ -62,9 +62,9 @@ public class HomePageController {
     public void toSearchMovie(){
         try
         {   s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(ADDMOVIE_VIEW));
+            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(Constants.View.SEARCH_MOVIE_VIEW));
             Stage stage = new Stage();
-            fxmlLoader.setController(new AddMovieController(stage));
+            fxmlLoader.setController(new SearchMovieController(stage));
             Parent root1 = (Parent) fxmlLoader.load();
             stage.setScene(new Scene(root1));
             stage.show();
