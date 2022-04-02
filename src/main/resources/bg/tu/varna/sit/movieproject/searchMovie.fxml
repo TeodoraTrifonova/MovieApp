@@ -195,7 +195,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <TextField fx:id="name" layoutX="26.0" layoutY="186.0" promptText="name of the movie">
+            <TextField fx:id="name" layoutX="17.0" layoutY="186.0" promptText="name of the movie">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -206,8 +206,11 @@
                      </color>
                   </DropShadow>
                </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </TextField>
-            <TextField fx:id="year" layoutX="270.0" layoutY="186.0" promptText="year of realease">
+            <TextField fx:id="year" layoutX="258.0" layoutY="186.0" promptText="year of realease">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -218,8 +221,11 @@
                      </color>
                   </DropShadow>
                </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </TextField>
-            <ComboBox fx:id="rating" layoutX="514.0" layoutY="290.0" prefHeight="25.0" prefWidth="167.0" promptText="movie's rating">
+            <ComboBox fx:id="rating" layoutX="514.0" layoutY="290.0" prefHeight="35.0" prefWidth="174.0" promptText="movie's rating">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -231,7 +237,7 @@
                   </DropShadow>
                </effect>
             </ComboBox>
-            <ComboBox fx:id="genre" layoutX="510.0" layoutY="186.0" prefHeight="25.0" prefWidth="167.0" promptText="movie's genre">
+            <ComboBox fx:id="genre" layoutX="510.0" layoutY="186.0" prefHeight="35.0" prefWidth="174.0" promptText="movie's genre">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -243,7 +249,7 @@
                   </DropShadow>
                </effect>
             </ComboBox>
-            <Label layoutX="27.0" layoutY="150.0" text="Name:" textFill="WHITE">
+            <Label layoutX="14.0" layoutY="150.0" text="Name:" textFill="WHITE">
                <font>
                   <Font name="Franklin Gothic Medium Cond" size="30.0" />
                </font>
@@ -255,7 +261,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Label layoutX="270.0" layoutY="150.0" text="Year:" textFill="WHITE">
+            <Label layoutX="258.0" layoutY="150.0" text="Year:" textFill="WHITE">
                <font>
                   <Font name="Franklin Gothic Medium Cond" size="30.0" />
                </font>
@@ -279,7 +285,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <Label layoutX="26.0" layoutY="257.0" text="Actor:" textFill="WHITE">
+            <Label layoutX="18.0" layoutY="254.0" text="Actor:" textFill="WHITE">
                <font>
                   <Font name="Franklin Gothic Medium Cond" size="30.0" />
                </font>
@@ -303,7 +309,7 @@
                   </DropShadow>
                </effect>
             </Label>
-            <TextField fx:id="actor" layoutX="26.0" layoutY="290.0" promptText="actor in movie">
+            <TextField fx:id="actor" layoutX="17.0" layoutY="288.0" prefHeight="31.0" prefWidth="167.0" promptText="actor in movie">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -314,6 +320,9 @@
                      </color>
                   </DropShadow>
                </effect>
+               <font>
+                  <Font size="16.0" />
+               </font>
             </TextField>
             <TableView fx:id="table" layoutY="350.0" prefHeight="282.0" prefWidth="713.0">
               <columns>
