@@ -1,13 +1,24 @@
 package bg.tu.varna.sit.movieproject.controllers;
 
+import bg.tu.varna.sit.movieproject.models.UserModel;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.scene.control.ComboBox;
-import javafx.scene.control.TableCell;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.net.URL;
+
+import static bg.tu.varna.sit.movieproject.common.Constants.View.HOMEPAGE_VIEW;
 
 public class SearchMovieController {
+
+
+
 
     @FXML
             private TextField name;
@@ -22,19 +33,60 @@ public class SearchMovieController {
     @FXML
             private TableView table;
     @FXML
-            private TableCell nameC;
+            private TableColumn nameC;
     @FXML
-            private TableCell genreC;
+            private TableColumn genreC;
     @FXML
-            private TableCell yearC;
+            private TableColumn yearC;
     @FXML
-            private TableCell ratingC;
+            private TableColumn ratingC;
     @FXML
-            private TableCell actorC;
+            private TableColumn actorC;
+
+
+    private double xOffset = 0;
+    private double yOffset = 0;
 
     Stage s =new Stage();
     public SearchMovieController(){ }
     public SearchMovieController(Stage stage){
         s=stage;
     }
+
+    @FXML
+    public void toHomePage()
+    {
+         try
+            {
+                s.close();
+                Stage stage =new Stage();
+                URL path = getClass().getResource(HOMEPAGE_VIEW);
+                FXMLLoader fxmlLoader = new FXMLLoader(path);
+                fxmlLoader.setController(new HomePageController(stage));
+                Parent root = fxmlLoader.load();
+                stage.initStyle(StageStyle.TRANSPARENT);
+                root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        xOffset = event.getSceneX();
+                        yOffset = event.getSceneY();
+                    }
+                });
+                root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                    @Override
+                    public void handle(MouseEvent event) {
+                        stage.setX(event.getScreenX() - xOffset);
+                        stage.setY(event.getScreenY() - yOffset);
+                    }
+                });
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+
+    }
 }
+

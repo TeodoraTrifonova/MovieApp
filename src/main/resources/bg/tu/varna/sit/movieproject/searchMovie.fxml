@@ -338,7 +338,7 @@
             </TableView>
          </children>
       </AnchorPane>
-      <Button fx:id="goBack" layoutX="309.0" layoutY="645.0" mnemonicParsing="false" style="-fx-background-color: #b89ee5;" text="Go back">
+      <Button fx:id="goBack" layoutX="309.0" layoutY="645.0" mnemonicParsing="false" onAction="#toHomePage" style="-fx-background-color: #b89ee5;" text="Go back">
          <font>
             <Font name="Franklin Gothic Medium Cond" size="30.0" />
          </font>
