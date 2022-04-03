@@ -115,26 +115,31 @@
                         <Font name="Franklin Gothic Heavy" size="70.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.2796208530805687">
+                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.17061611374407581">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                    <Color red="0.3499999940395355" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.05747126436781609">
+                              <Stop offset="0.2183908045977011">
                                  <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                    <Color red="0.3499999940395355" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.5566220326262978">
+                              <Stop offset="0.29225421653434364">
                                  <color>
                                     <Color red="0.03999999910593033" green="0.07199999690055847" blue="1.0" />
                                  </color>
                               </Stop>
+                              <Stop offset="0.8352490421455937">
+                                 <color>
+                                    <Color red="0.9399999976158142" green="0.1128000020980835" blue="0.1128000020980835" />
+                                 </color>
+                              </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.3499999940395355" blue="1.0" />
+                                    <Color red="0.9300000071525574" green="0.120899997651577" blue="0.5417484045028687" />
                                  </color>
                               </Stop>
                            </stops>
@@ -308,26 +313,31 @@
                         <Font name="Franklin Gothic Heavy" size="70.0" />
                      </font>
                      <textFill>
-                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.2796208530805687">
+                        <LinearGradient endX="1.0" endY="0.8388625592417059" startX="1.0" startY="0.17061611374407581">
                            <stops>
                               <Stop>
                                  <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                    <Color red="0.3499999940395355" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.05747126436781609">
+                              <Stop offset="0.2183908045977011">
                                  <color>
-                                    <Color red="0.10964912176132202" green="0.696052610874176" blue="0.9473684430122375" />
+                                    <Color red="0.3499999940395355" blue="1.0" />
                                  </color>
                               </Stop>
-                              <Stop offset="0.5566220326262978">
+                              <Stop offset="0.29225421653434364">
                                  <color>
                                     <Color red="0.03999999910593033" green="0.07199999690055847" blue="1.0" />
                                  </color>
                               </Stop>
+                              <Stop offset="0.8352490421455937">
+                                 <color>
+                                    <Color red="0.9399999976158142" green="0.1128000020980835" blue="0.1128000020980835" />
+                                 </color>
+                              </Stop>
                               <Stop offset="1.0">
                                  <color>
-                                    <Color red="0.3499999940395355" blue="1.0" />
+                                    <Color red="0.9300000071525574" green="0.120899997651577" blue="0.5417484045028687" />
                                  </color>
                               </Stop>
                            </stops>
@@ -354,6 +364,37 @@
                   </Label>
                </children>
             </AnchorPane>
+            <Button fx:id="exit" layoutX="551.0" layoutY="-2.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #210063;" text="x">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="22.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.33057552576065063" blue="1.0" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.12941177189350128" blue="0.38823530077934265" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Button>
          </children>
       </AnchorPane>
    </children>

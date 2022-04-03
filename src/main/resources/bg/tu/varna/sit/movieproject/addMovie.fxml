@@ -372,5 +372,36 @@
             </TextField>
          </children>
       </AnchorPane>
+      <Button fx:id="exit" layoutX="707.0" layoutY="-1.0" mnemonicParsing="false" onAction="#toHomePage" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #210063;" text="x">
+         <font>
+            <Font name="Franklin Gothic Medium Cond" size="22.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="0.1090047393364928" startX="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.33057552576065063" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.927006185054779" green="0.8981481194496155" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.12941177189350128" blue="0.38823530077934265" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
    </children>
 </AnchorPane>
