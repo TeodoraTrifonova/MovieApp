@@ -2,14 +2,20 @@ package bg.tu.varna.sit.movieproject.controllers;
 
 import bg.tu.varna.sit.movieproject.models.UserModel;
 import bg.tu.varna.sit.movieproject.services.RegistrationService;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+
+import java.net.URL;
 
 import static bg.tu.varna.sit.movieproject.common.Constants.View.LOGIN_VIEW;
+import static bg.tu.varna.sit.movieproject.common.Constants.View.REGISTRATION_VIEW;
 
 public class RegistrationController {
 
@@ -28,6 +34,9 @@ public class RegistrationController {
     public RegistrationController(Stage stage){
         s=stage;
     }
+
+    private double xOffset = 0;
+    private double yOffset = 0;
 
     @FXML
     public void userRegistration() throws InterruptedException {
@@ -48,12 +57,30 @@ public class RegistrationController {
             {
                 registrationService.saveUser(userModel);
                 try
-                {   s.close();
-                    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(LOGIN_VIEW));
-                    Stage stage = new Stage();
+                {
+                    s.close();
+                    Stage stage =new Stage();
+                    URL path = getClass().getResource(LOGIN_VIEW);
+                    FXMLLoader fxmlLoader = new FXMLLoader(path);
                     fxmlLoader.setController(new LoginController(stage));
-                    Parent root1 = (Parent) fxmlLoader.load();
-                    stage.setScene(new Scene(root1));
+                    Parent root = fxmlLoader.load();
+                    stage.initStyle(StageStyle.TRANSPARENT);
+                    root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+                            xOffset = event.getSceneX();
+                            yOffset = event.getSceneY();
+                        }
+                    });
+                    root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                        @Override
+                        public void handle(MouseEvent event) {
+                            stage.setX(event.getScreenX() - xOffset);
+                            stage.setY(event.getScreenY() - yOffset);
+                        }
+                    });
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
                     stage.show();
                 } catch (Exception e)
                 {
@@ -68,12 +95,30 @@ public class RegistrationController {
     @FXML
     public void backToLogin(){
         try
-        {   s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(LOGIN_VIEW));
-            Stage stage = new Stage();
+        {
+            s.close();
+            Stage stage =new Stage();
+            URL path = getClass().getResource(LOGIN_VIEW);
+            FXMLLoader fxmlLoader = new FXMLLoader(path);
             fxmlLoader.setController(new LoginController(stage));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setScene(new Scene(root1));
+            Parent root = fxmlLoader.load();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xOffset = event.getSceneX();
+                    yOffset = event.getSceneY();
+                }
+            });
+            root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    stage.setX(event.getScreenX() - xOffset);
+                    stage.setY(event.getScreenY() - yOffset);
+                }
+            });
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
             stage.show();
         } catch (Exception e)
         {
