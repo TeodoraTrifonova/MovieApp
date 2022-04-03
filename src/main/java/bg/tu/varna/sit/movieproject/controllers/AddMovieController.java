@@ -10,15 +10,18 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
 import javafx.fxml.FXML;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import org.w3c.dom.Text;
 
 import java.net.URL;
@@ -48,6 +51,8 @@ public class AddMovieController implements Initializable {
 
     private final FilmService filmService= FilmService.getInstance();
     private final GenreService genreService= GenreService.getInstance();
+    private double xOffset = 0;
+    private double yOffset = 0;
 
     private final ObservableList<Integer> num = FXCollections.observableArrayList(1,2,3,4,5,6,7,8,9,10);
 
@@ -58,10 +63,15 @@ public class AddMovieController implements Initializable {
     @FXML
     public void addTheMovie(){
 
-        if(name.getText().equals("") || year.getText().equals("") || actors.getText().equals("") || description.getText().equals("") || genre.getValue()==null || rating.getValue() == null){
+        int myNum=Integer.parseInt(year.getText());
+        if(name.getText().equals("") || year.getText().equals("")  || actors.getText().equals("") || description.getText().equals("") || genre.getValue()==null || rating.getValue() == null){
             Alert alert=new Alert(Alert.AlertType.WARNING,"Please, fill all fields.", ButtonType.OK);
             alert.show();
 
+        }
+        else if(year.getText().length()!=4 || (myNum<=1900 || myNum>=2100)){
+            Alert alert=new Alert(Alert.AlertType.WARNING,"Input a year between 1900-2100.", ButtonType.OK);
+            alert.show();
         }
         else
         {
@@ -80,19 +90,36 @@ public class AddMovieController implements Initializable {
         }
 
     }
-     // Da se dobavqt izklyucheniq za nomera, da se ogranichi textfielda - 1900-2022 i samo chisla
     @FXML
     public void BackToHomePage(){
         try
-        {   s.close();
-            FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(HOMEPAGE_VIEW));
-            Stage stage = new Stage();
-            fxmlLoader.setController(new HomePageController(stage));
-            Parent root1 = (Parent) fxmlLoader.load();
-            stage.setScene(new Scene(root1));
-            stage.show();
-        } catch (Exception e)
         {
+            s.close();
+            Stage stage =new Stage();
+            URL path = getClass().getResource(HOMEPAGE_VIEW);
+            FXMLLoader fxmlLoader = new FXMLLoader(path);
+            fxmlLoader.setController(new HomePageController(stage));
+            Parent root = fxmlLoader.load();
+            stage.initStyle(StageStyle.TRANSPARENT);
+            root.setOnMousePressed(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    xOffset = event.getSceneX();
+                    yOffset = event.getSceneY();
+                }
+            });
+            root.setOnMouseDragged(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+                    stage.setX(event.getScreenX() - xOffset);
+                    stage.setY(event.getScreenY() - yOffset);
+                }
+            });
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+        }
+        catch (Exception e) {
             e.printStackTrace();
         }
     }
