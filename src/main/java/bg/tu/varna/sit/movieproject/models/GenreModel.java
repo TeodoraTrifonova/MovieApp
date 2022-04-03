@@ -1,27 +1,17 @@
-package bg.tu.varna.sit.movieproject.entities;
+package bg.tu.varna.sit.movieproject.models;
 
-import javax.persistence.*;
-import java.io.Serial;
-import java.io.Serializable;
+import javax.persistence.Column;
 import java.util.Objects;
 
-@Table(name="genres")
-@Entity
-public class Genre implements Serializable {
-    @Serial
-    private static final long serialVersionUID =1L;
+public class GenreModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idGenre",nullable = false)
     private  Long idGenre;
-
-    @Column(name = "genreName",nullable = false)
     private  String genreName;
 
-    public Genre(){}
+    public GenreModel() {
+    }
 
-    public Genre(String genreName) {
+    public GenreModel(String genreName) {
         this.genreName = genreName;
     }
 
@@ -45,8 +35,8 @@ public class Genre implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Genre genre = (Genre) o;
-        return Objects.equals(genreName, genre.genreName);
+        GenreModel that = (GenreModel) o;
+        return Objects.equals(genreName, that.genreName);
     }
 
     @Override
@@ -56,8 +46,6 @@ public class Genre implements Serializable {
 
     @Override
     public String toString() {
-        return "Genre{" +
-                "idGenre=" + idGenre +
-                '}';
+        return  genreName ;
     }
 }

@@ -1,43 +1,23 @@
-package bg.tu.varna.sit.movieproject.entities;
+package bg.tu.varna.sit.movieproject.models;
 
-import javax.persistence.*;
-import java.io.Serial;
-import java.io.Serializable;
+import bg.tu.varna.sit.movieproject.entities.Genre;
+
 import java.util.Objects;
 
-@Table(name="films")
-@Entity
-public class Film implements Serializable {
-    @Serial
-    private  static final long serialVersionUID =1L;
+public class FilmModel {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="idFilm",nullable = false)
     private Long idFilm;
-
-    @Column(name = "filmName",nullable = false)
     private String filmName;
-
-    @Column(name = "actors",nullable = false)
     private String actors;
-
-    @Column(name="releaseYear",nullable = false)
     private int releaseYear;
-
-    @Column(name="rating",nullable = false)
     private int rating;
-
-    @Column(name="description",nullable = false)
     private String description;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "idGenre")
     private Genre byGenre;
 
-    public Film() {}
+    public FilmModel() {
+    }
 
-    public Film(String filmName, String actors, int releaseYear, int rating, String description, Genre byGenre) {
+    public FilmModel(String filmName, String actors, int releaseYear, int rating, String description, Genre byGenre) {
         this.filmName = filmName;
         this.actors = actors;
         this.releaseYear = releaseYear;
@@ -45,6 +25,8 @@ public class Film implements Serializable {
         this.description = description;
         this.byGenre = byGenre;
     }
+
+
 
     public Long getIdFilm() {
         return idFilm;
@@ -106,8 +88,8 @@ public class Film implements Serializable {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Film film = (Film) o;
-        return releaseYear == film.releaseYear && Objects.equals(filmName, film.filmName);
+        FilmModel filmModel = (FilmModel) o;
+        return releaseYear == filmModel.releaseYear && Objects.equals(filmName, filmModel.filmName);
     }
 
     @Override
@@ -117,9 +99,6 @@ public class Film implements Serializable {
 
     @Override
     public String toString() {
-        return "Film{" +
-                "idFilm=" + idFilm +
-                ", filmName='" + filmName + '\'' +
-                '}';
+        return ""+filmName;
     }
 }
