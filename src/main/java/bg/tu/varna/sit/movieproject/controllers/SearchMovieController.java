@@ -42,6 +42,8 @@ public class SearchMovieController {
             private TableColumn ratingC;
     @FXML
             private TableColumn actorC;
+    @FXML
+    private Button exit;
 
 
     private double xOffset = 0;

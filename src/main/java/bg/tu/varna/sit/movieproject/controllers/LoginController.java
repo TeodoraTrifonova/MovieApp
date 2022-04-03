@@ -30,6 +30,9 @@ public class LoginController {
     private Button login;
     @FXML
     private Button register;
+    @FXML
+    private Button exit;
+
 
 
     private double xOffset = 0;

@@ -48,6 +48,8 @@ public class AddMovieController implements Initializable {
     private Button addMovie;
     @FXML
     private Button goBack;
+    @FXML
+    private Button exit;
 
     private final FilmService filmService= FilmService.getInstance();
     private final GenreService genreService= GenreService.getInstance();

@@ -28,6 +28,10 @@ public class RegistrationController {
     @FXML
     private Button goBack;
     private final RegistrationService registrationService=RegistrationService.getInstance();
+    @FXML
+    private Button exit;
+
+
 
     Stage s =new Stage();
     public RegistrationController(){ }

@@ -23,7 +23,8 @@ public class HomePageController {
     private Button searchMovies;
     @FXML
     private Button logout;
-
+    @FXML
+    private Button exit;
 
     Stage s =new Stage();
     public HomePageController(){ }
