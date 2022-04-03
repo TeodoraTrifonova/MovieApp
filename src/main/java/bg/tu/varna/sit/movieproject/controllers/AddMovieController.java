@@ -6,6 +6,8 @@ import bg.tu.varna.sit.movieproject.models.FilmModel;
 import bg.tu.varna.sit.movieproject.models.GenreModel;
 import bg.tu.varna.sit.movieproject.services.FilmService;
 import bg.tu.varna.sit.movieproject.services.GenreService;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
@@ -100,6 +102,14 @@ public class AddMovieController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         rating.setItems(num);
         genre.setItems(genreService.getAllGenres());
+
+        year.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observableValue, String s, String t1) {
+                year.setText(t1.replaceAll("[^\\d]",""));
+            }
+        });
+
 
     }
 }
