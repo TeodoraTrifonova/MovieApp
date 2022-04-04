@@ -8,8 +8,6 @@
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.effect.Glow?>
 <?import javafx.scene.effect.Reflection?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
@@ -79,14 +77,6 @@
                         </LinearGradient>
                      </stroke>
                   </Polyline>
-                  <ImageView fitHeight="295.0" fitWidth="474.0" layoutX="16.0" layoutY="184.0" opacity="0.19" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../../../camera%20info.jpg" />
-                     </image>
-                     <effect>
-                        <Reflection bottomOpacity="0.25" fraction="0.53" topOpacity="0.45" />
-                     </effect>
-                  </ImageView>
                   <Label layoutX="34.0" layoutY="16.0" text="Registration">
                      <font>
                         <Font name="Franklin Gothic Heavy" size="70.0" />
