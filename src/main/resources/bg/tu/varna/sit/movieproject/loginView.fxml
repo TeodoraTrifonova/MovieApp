@@ -267,7 +267,7 @@
                         </DropShadow>
                      </effect>
                   </Label>
-                  <Button fx:id="exit" layoutX="435.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #310590;" text="x">
+                  <Button fx:id="exit" layoutX="435.0" mnemonicParsing="false" onAction="#Exit" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #310590;" text="x">
                      <font>
                         <Font name="Franklin Gothic Medium Cond" size="22.0" />
                      </font>

@@ -1,6 +1,7 @@
 package bg.tu.varna.sit.movieproject.controllers;
 
 import bg.tu.varna.sit.movieproject.models.UserModel;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -88,7 +89,13 @@ public class SearchMovieController {
             catch (Exception e) {
                 e.printStackTrace();
             }
-
     }
+
+
+    public void Exit(ActionEvent e) {
+        Stage stage = (Stage) exit.getScene().getWindow();
+        stage.close();
+    }
+
 }
 

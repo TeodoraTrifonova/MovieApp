@@ -3,6 +3,7 @@ package bg.tu.varna.sit.movieproject.controllers;
 import bg.tu.varna.sit.movieproject.common.Constants;
 import bg.tu.varna.sit.movieproject.models.UserModel;
 import bg.tu.varna.sit.movieproject.services.RegistrationService;
+import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -127,6 +128,12 @@ public class LoginController {
                 alert.show();
             }
         }
+    }
+
+
+    public void Exit(ActionEvent e) {
+        Stage stage = (Stage) exit.getScene().getWindow();
+        stage.close();
     }
 
 

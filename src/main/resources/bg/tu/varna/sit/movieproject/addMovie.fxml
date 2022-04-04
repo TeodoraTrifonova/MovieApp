@@ -372,7 +372,7 @@
             </TextField>
          </children>
       </AnchorPane>
-      <Button fx:id="exit" layoutX="707.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #210063;" text="x">
+      <Button fx:id="exit" layoutX="707.0" layoutY="-1.0" mnemonicParsing="false" onAction="#Exit" prefHeight="30.0" prefWidth="33.0" style="-fx-background-color: #210063;" text="x">
          <font>
             <Font name="Franklin Gothic Medium Cond" size="22.0" />
          </font>
