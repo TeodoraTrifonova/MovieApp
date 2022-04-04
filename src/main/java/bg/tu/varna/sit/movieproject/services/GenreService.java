@@ -1,6 +1,7 @@
 package bg.tu.varna.sit.movieproject.services;
 
 import bg.tu.varna.sit.movieproject.entities.Genre;
+import bg.tu.varna.sit.movieproject.models.FilmModel;
 import bg.tu.varna.sit.movieproject.models.GenreModel;
 import bg.tu.varna.sit.movieproject.repositories.GenreRepository;
 import javafx.collections.FXCollections;
@@ -45,5 +46,20 @@ public class GenreService {
             log.error("Cannot find any genres in database!");
             return null;
         }
+    }
+
+    public Genre getGenreByName(String name)
+    {
+        ObservableList<GenreModel> allcopies = getAllGenres();
+        ObservableList<GenreModel> copies = FXCollections.observableArrayList();
+        for(GenreModel copy : allcopies)
+        {
+            if(copy.getGenreName().equals(name))
+            {
+
+                return listViewToEntity(copy);
+            }
+        }
+       return null;
     }
 }

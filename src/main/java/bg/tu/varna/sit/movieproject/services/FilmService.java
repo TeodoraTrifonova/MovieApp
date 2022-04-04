@@ -1,6 +1,7 @@
 package bg.tu.varna.sit.movieproject.services;
 
 import bg.tu.varna.sit.movieproject.entities.Film;
+import bg.tu.varna.sit.movieproject.entities.Genre;
 import bg.tu.varna.sit.movieproject.entities.User;
 import bg.tu.varna.sit.movieproject.models.FilmModel;
 import bg.tu.varna.sit.movieproject.models.UserModel;
@@ -20,6 +21,7 @@ public class FilmService {
     public static FilmService getInstance(){
         return FilmService.FilmServiceHolder.INSTANCE;
     }
+
 
     private static class FilmServiceHolder{
         public static final FilmService INSTANCE = new FilmService();
@@ -53,8 +55,82 @@ public class FilmService {
         }
         else
         {
-            log.error("Cannot find any admins in database!");
+            log.error("Cannot find any films in database!");
             return null;
         }
     }
+
+
+    public ObservableList<FilmModel> getFilmsByActor(String text) {
+        ObservableList<FilmModel> allcopies = getAllFilms();
+        ObservableList<FilmModel> copies = FXCollections.observableArrayList();
+        for(FilmModel copy : allcopies)
+        {
+            if(copy.getActors().contains(text))
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+    public ObservableList<FilmModel> getFilmsByName(String name)
+    {
+        ObservableList<FilmModel> allcopies = getAllFilms();
+        ObservableList<FilmModel> copies = FXCollections.observableArrayList();
+        for(FilmModel copy : allcopies)
+        {
+            if(copy.getFilmName().equals(name))
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+    public ObservableList<FilmModel> getFilmsByRating(int ratingMovie)
+    {
+        ObservableList<FilmModel> allcopies = getAllFilms();
+        ObservableList<FilmModel> copies = FXCollections.observableArrayList();
+        for(FilmModel copy : allcopies)
+        {
+            if(copy.getRating()==ratingMovie)
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+
+    public ObservableList<FilmModel> getFilmsByYear(int year)
+    {
+        ObservableList<FilmModel> allcopies = getAllFilms();
+        ObservableList<FilmModel> copies = FXCollections.observableArrayList();
+        for(FilmModel copy : allcopies)
+        {
+            if(copy.getReleaseYear()==year)
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
+
+    public ObservableList<FilmModel> getFilmsByGenre(Genre genreMovie) {
+        ObservableList<FilmModel> allcopies = getAllFilms();
+        ObservableList<FilmModel> copies = FXCollections.observableArrayList();
+        for(FilmModel copy : allcopies)
+        {
+            if(copy.getByGenre().equals(genreMovie))
+            {
+                copies.add(copy);
+            }
+        }
+        return copies;
+    }
+
 }
+
+

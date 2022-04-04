@@ -136,9 +136,13 @@ public class HomePageController {
             e.printStackTrace();
         }
     }
+
+    @FXML
     public void Exit(ActionEvent e) {
         Stage stage = (Stage) exit.getScene().getWindow();
         stage.close();
     }
+
+
 
 }
