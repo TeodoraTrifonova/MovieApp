@@ -70,10 +70,6 @@ public class GenreRepository  implements DAORepository<Genre>{
         }
     }
 
-    @Override
-    public Genre getById(int id) {
-        return null;
-    }
 
 
     @Override

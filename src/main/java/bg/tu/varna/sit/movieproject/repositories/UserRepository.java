@@ -71,12 +71,6 @@ public class UserRepository  implements DAORepository<User>{
     }
 
     @Override
-    public User getById(int id) {
-        return null;
-    }
-
-
-    @Override
     public List<User> getAll() {
         Session session = Connection.openSession();
         Transaction transaction = session.beginTransaction();

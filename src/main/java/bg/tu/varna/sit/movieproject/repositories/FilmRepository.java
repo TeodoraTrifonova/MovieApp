@@ -70,11 +70,6 @@ public class FilmRepository  implements DAORepository<Film>  {
         }
     }
 
-    @Override
-    public Film getById(int id) {
-        return null;
-    }
-
 
     @Override
     public List<Film> getAll() {

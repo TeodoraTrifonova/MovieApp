@@ -17,6 +17,9 @@ public class FilmModel {
     public FilmModel() {
     }
 
+    public FilmModel(String filmName) {
+    }
+
     public FilmModel(String filmName, String actors, int releaseYear, int rating, String description, Genre byGenre) {
         this.filmName = filmName;
         this.actors = actors;
